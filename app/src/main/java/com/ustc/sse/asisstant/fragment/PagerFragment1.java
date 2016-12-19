@@ -2,14 +2,18 @@ package com.ustc.sse.asisstant.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 
 import com.ustc.sse.asisstant.R;
+import com.ustc.sse.asisstant.adapter.TitlePagerAdapter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,6 +27,7 @@ import java.util.Objects;
 
 public class PagerFragment1 extends Fragment {
 
+    private List<View> list=null;
 
     @Nullable
     @Override
@@ -30,6 +35,27 @@ public class PagerFragment1 extends Fragment {
         //return super.onCreateView(inflater, container, savedInstanceState);
         View view=inflater.inflate(R.layout.pager_page1,container,false);
         //设置广告栏
+        ViewPager viewPager=(ViewPager)view.findViewById(R.id.title_pic);
+        list=new ArrayList<View>();
+
+        ImageView imageView=new ImageView(getContext());
+        imageView.setImageResource(R.drawable.title_commercial);
+        list.add(imageView);
+        imageView=new ImageView(getContext());
+        imageView.setImageResource(R.drawable.title_commercial1);
+        list.add(imageView);
+        imageView=new ImageView(getContext());
+        imageView.setImageResource(R.drawable.title_commercial2);
+        list.add(imageView);
+        imageView=new ImageView(getContext());
+        imageView.setImageResource(R.drawable.title_commercial3);
+        list.add(imageView);
+
+        TitlePagerAdapter titlePagerAdapter=new TitlePagerAdapter(list);
+        viewPager.setAdapter(titlePagerAdapter);
+
+
+
 
 
         //设置菜单
