@@ -15,7 +15,7 @@ import android.widget.SimpleAdapter;
 import com.ustc.sse.asisstant.R;
 import com.ustc.sse.asisstant.activity.Dish_Recommand;
 import com.ustc.sse.asisstant.adapter.TitlePagerAdapter;
-import com.ustc.sse.asisstant.util.Advertisement;
+import com.ustc.sse.asisstant.entity.Advertisement;
 
 import java.util.ArrayList;
 import java.util.HashMap;

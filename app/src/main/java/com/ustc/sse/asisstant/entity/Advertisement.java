@@ -1,4 +1,4 @@
-package com.ustc.sse.asisstant.util;
+package com.ustc.sse.asisstant.entity;
 
 import android.content.Context;
 import android.view.View;
