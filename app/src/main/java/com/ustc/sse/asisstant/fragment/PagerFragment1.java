@@ -14,6 +14,7 @@ import android.widget.SimpleAdapter;
 
 import com.ustc.sse.asisstant.R;
 import com.ustc.sse.asisstant.activity.Dish_Recommand;
+import com.ustc.sse.asisstant.activity.Traffic;
 import com.ustc.sse.asisstant.adapter.TitlePagerAdapter;
 import com.ustc.sse.asisstant.entity.Advertisement;
 
@@ -75,6 +76,12 @@ public class PagerFragment1 extends Fragment {
                    case 0: //美食推荐
                    {
                        Intent intent=new Intent(getActivity(), Dish_Recommand.class);
+                       startActivity(intent);
+                       break;
+                   }
+                   case 3: //园区出行
+                   {
+                       Intent intent=new Intent(getActivity(), Traffic.class);
                        startActivity(intent);
                        break;
                    }
